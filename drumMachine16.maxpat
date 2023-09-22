@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 253.0, 232.0, 917.0, 755.0 ],
+		"rect" : [ 253.0, 232.0, 1026.0, 755.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,70 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 843.5, 619.0, 133.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "Generating Categories"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-49",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 618.5, 137.0, 113.0, 20.0 ],
+					"text" : "Training Categories"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"maxclass" : "tab",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 825.0, 641.5, 171.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 825.0, 640.0, 280.0, 21.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "Funky", "Straight" ],
+							"parameter_longname" : "goodness[1]",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "goodness",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"tabs" : [ "Funky", "Straight" ],
+					"varname" : "goodness[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"bgcolor" : [ 1.0, 0.792156862745098, 0.0, 1.0 ],
+					"id" : "obj-44",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 826.0, 615.0, 170.0, 47.5 ],
+					"proportion" : 0.5
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "message",
@@ -204,7 +268,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 27.0, 173.0, 405.0, 78.0 ],
-					"text" : "Once model has been trained, press generate to create 8 random sequences that are classed as good (class 6). Then press playGenerated to play them one after the other."
+					"text" : "Once model has been trained, press the Generating Categories \"funky\" or \"straight\" buttons      to create 16 random sequences in those classes. Then press playGenerated to play them one after the other."
 				}
 
 			}
@@ -305,7 +369,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "clearall" ],
 					"patcher" : 					{
@@ -348,6 +412,31 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 111.0, 73.0, 29.5, 22.0 ],
+									"text" : "+ 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-1",
+									"index" : 2,
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 111.0, 34.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-7",
 									"maxclass" : "comment",
@@ -469,11 +558,11 @@
 								"box" : 								{
 									"id" : "obj-10",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 3,
-									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 51.0, 80.0, 44.0, 22.0 ],
-									"text" : "sel 4 5"
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "bang", "" ],
+									"patching_rect" : [ 51.0, 107.0, 79.0, 22.0 ],
+									"text" : "sel 0"
 								}
 
 							}
@@ -565,14 +654,14 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-22", 0 ],
-									"source" : [ "obj-10", 2 ]
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-1", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-23", 0 ],
+									"destination" : [ "obj-22", 0 ],
 									"source" : [ "obj-10", 1 ]
 								}
 
@@ -581,6 +670,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
 									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 1 ],
+									"source" : [ "obj-11", 0 ]
 								}
 
 							}
@@ -786,12 +882,12 @@
 				"box" : 				{
 					"fontsize" : 16.0,
 					"id" : "obj-69",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 27.0, 115.0, 402.0, 42.0 ],
-					"text" : "After step 6 (model is running), pressing step 7 sends random sequences to Wekinator to classify."
+					"patching_rect" : [ 27.0, 112.0, 402.0, 60.0 ],
+					"text" : "Continue throught the steps. After step 6 (model is running), pressing step 7 sends random sequences to Wekinator to classify."
 				}
 
 			}
@@ -803,8 +899,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 27.0, 62.0, 402.0, 42.0 ],
-					"text" : "Clear sequencer matrix control and manually program. Follow numbers 1 - 5 to record and train the model."
+					"patching_rect" : [ 27.0, 64.0, 402.0, 42.0 ],
+					"text" : "Clear sequencer matrix control and manually program. Choose \"straight\" or \"funky\" to label the beat. "
 				}
 
 			}
@@ -1494,7 +1590,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 543.5, 675.0, 75.0, 22.0 ],
+					"patching_rect" : [ 526.5, 688.0, 75.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2881,7 +2977,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 60.0, 701.5, 110.0, 33.0 ],
-					"text" : "length = 48 inputs, 1 output, 5 classes"
+					"text" : "length = 48 inputs, 1 output, 2 classes"
 				}
 
 			}
@@ -2892,19 +2988,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 589.0, 129.0, 70.0, 22.0 ],
+					"patching_rect" : [ 589.0, 97.0, 70.0, 22.0 ],
 					"text" : "loadmess 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-61",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 686.0, 137.0, 96.0, 20.0 ],
-					"text" : "Goodness Label"
 				}
 
 			}
@@ -2916,21 +3001,21 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 589.0, 159.0, 280.0, 21.0 ],
+					"patching_rect" : [ 589.0, 159.0, 171.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 369.0, 16.0, 280.0, 21.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "-2", "-1", "0", "1", "2" ],
+							"parameter_enum" : [ "Funky", "Straight" ],
 							"parameter_longname" : "goodness",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "goodness",
 							"parameter_type" : 2
 						}
 
 					}
 ,
-					"tabs" : [ "-2", "-1", "0", "1", "2" ],
+					"tabs" : [ "Funky", "Straight" ],
 					"varname" : "goodness"
 				}
 
@@ -2998,7 +3083,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 590.0, 156.5, 282.0, 23.5 ],
+					"patching_rect" : [ 590.0, 133.5, 170.0, 46.5 ],
 					"proportion" : 0.5
 				}
 
@@ -3014,6 +3099,48 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 27.0, 290.0, 457.0, 33.0 ],
 					"proportion" : 0.5
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-55",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 355.25, 84.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "1",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-53",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 309.0, 192.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "8",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
 				}
 
 			}
@@ -3055,6 +3182,27 @@
 					"patching_rect" : [ 367.5, 345.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "7",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-47",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 994.0, 639.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "8",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
 				}
 
@@ -3178,7 +3326,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 876.0, 159.0, 20.0, 20.0 ],
+					"patching_rect" : [ 758.0, 156.5, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "1",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -3270,6 +3418,13 @@
 					"destination" : [ "obj-28", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 1 ],
+					"source" : [ "obj-39", 0 ]
 				}
 
 			}
@@ -3417,6 +3572,7 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-39" : [ "goodness[1]", "goodness", 0 ],
 			"obj-50::obj-18" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-57" : [ "goodness", "goodness", 0 ],
 			"parameterbanks" : 			{
