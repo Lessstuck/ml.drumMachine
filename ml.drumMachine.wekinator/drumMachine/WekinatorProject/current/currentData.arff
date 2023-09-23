@@ -1,0 +1,74 @@
+@relation dataset
+
+@attribute ID numeric
+@attribute Time date 'yyyy/MM/dd HH:mm:ss:SSS'
+@attribute 'Training round' numeric
+@attribute inputs-1 numeric
+@attribute inputs-2 numeric
+@attribute inputs-3 numeric
+@attribute inputs-4 numeric
+@attribute inputs-5 numeric
+@attribute inputs-6 numeric
+@attribute inputs-7 numeric
+@attribute inputs-8 numeric
+@attribute inputs-9 numeric
+@attribute inputs-10 numeric
+@attribute inputs-11 numeric
+@attribute inputs-12 numeric
+@attribute inputs-13 numeric
+@attribute inputs-14 numeric
+@attribute inputs-15 numeric
+@attribute inputs-16 numeric
+@attribute inputs-17 numeric
+@attribute inputs-18 numeric
+@attribute inputs-19 numeric
+@attribute inputs-20 numeric
+@attribute inputs-21 numeric
+@attribute inputs-22 numeric
+@attribute inputs-23 numeric
+@attribute inputs-24 numeric
+@attribute inputs-25 numeric
+@attribute inputs-26 numeric
+@attribute inputs-27 numeric
+@attribute inputs-28 numeric
+@attribute inputs-29 numeric
+@attribute inputs-30 numeric
+@attribute inputs-31 numeric
+@attribute inputs-32 numeric
+@attribute inputs-33 numeric
+@attribute inputs-34 numeric
+@attribute inputs-35 numeric
+@attribute inputs-36 numeric
+@attribute inputs-37 numeric
+@attribute inputs-38 numeric
+@attribute inputs-39 numeric
+@attribute inputs-40 numeric
+@attribute inputs-41 numeric
+@attribute inputs-42 numeric
+@attribute inputs-43 numeric
+@attribute inputs-44 numeric
+@attribute inputs-45 numeric
+@attribute inputs-46 numeric
+@attribute inputs-47 numeric
+@attribute inputs-48 numeric
+@attribute outputs-1 {0,1,2}
+
+@data
+5,'2023/09/23 11:26:01:713',2,1,0,0,0,1,0,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1,0,0,1
+6,'2023/09/23 11:26:31:846',2,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1
+7,'2023/09/23 11:26:55:991',2,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1
+8,'2023/09/23 11:28:01:577',2,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,2
+9,'2023/09/23 11:29:16:735',2,1,0,0,0,0,0,1,0,0,0,0,0,1,0,1,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,2
+10,'2023/09/23 11:29:46:843',2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,1,0,0,0,1,1,0,1,1,0,1
+11,'2023/09/23 11:30:53:961',2,1,0,1,0,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,0,0,1,0,0,0,0,1,0,1,0,0,2
+12,'2023/09/23 11:32:37:591',2,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,2
+13,'2023/09/23 12:00:13:943',3,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,2
+14,'2023/09/23 12:00:36:211',3,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,1,1,1,1,1,0,0,1,0,1,0,1,0,1,0,0,2
+15,'2023/09/23 12:00:52:039',3,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,1,0,0,2
+16,'2023/09/23 12:10:24:057',4,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,2
+17,'2023/09/23 12:10:52:043',4,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,2
+18,'2023/09/23 12:11:47:309',4,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,2
+19,'2023/09/23 12:14:01:254',6,0,0,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,0,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,1
+20,'2023/09/23 12:14:42:699',6,1,0,0,0,1,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,0,1,0,1,0,1,0,2
+21,'2023/09/23 12:15:06:233',6,0,0,1,1,0,0,0,1,0,1,0,0,1,0,1,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,1,0,1,1,1,1
+22,'2023/09/23 12:16:08:996',6,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,1
